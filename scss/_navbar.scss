@@ -1,0 +1,18 @@
+#navbar {
+    grid-area: navbar;
+    position: fixed;
+    padding: 1.25rem; // 20px
+
+    & img {
+        max-width: calc(18.75rem - 2*1.25rem); // 300px - 2*20px (padding)
+    }
+}
+
+//.accent {}
+//.code-span {}
+//.main-section {}
+//.note {}
+//.code-container {}
+//.pure-code {}
+//.run-code {}
+//.preview {}

@@ -1,0 +1,31 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-family: "Roboto", sans-serif;
+    background-color: $jet;
+    color: $white;
+
+    // SIDEBAR DISPLAY
+    display: grid;
+    grid-template-columns: minmax(18.75rem, auto) 1fr;
+    grid-template-areas: "navbar mainContent";
+    grid-gap: 1.25rem;
+}
+
+a {
+    display: block;
+    margin: 1rem 0;
+    text-decoration: none;
+    color: $white;
+}
