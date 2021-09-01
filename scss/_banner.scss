@@ -1,3 +1,9 @@
+.banner-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .banner {
     position: fixed;
     width: 100vw;
@@ -5,13 +11,13 @@
     z-index: 1;
     background-color: $jet;
 
-    & img {
+    img {
         width: 3.125rem; // 50px
         margin: 0.78125rem; // 12.5px
         border-radius: 0.5rem; // 8px
     }
 
-    & h3 {
+    h3 {
         display: inline;
         margin-left: 0.78125rem;
         color: $white;

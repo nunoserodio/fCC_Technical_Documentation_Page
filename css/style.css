@@ -18,7 +18,34 @@ body {
   color: #323330;
 }
 
-.flex-row {
+.grid-display {
+  display: -ms-grid;
+  display: grid;
+  position: absolute;
+  margin-top: 4.6875rem;
+  -ms-grid-columns: minmax(20.3125rem, auto) 1fr;
+      grid-template-columns: minmax(20.3125rem, auto) 1fr;
+      grid-template-areas: "navbar mainContent";
+}
+
+/*  SCROLLBAR  */
+::-webkit-scrollbar {
+  width: 0.625rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAFAFF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #323330;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #515251;
+}
+
+.banner-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,14 +56,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.grid-display {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: minmax(18.75rem, auto) 1fr;
-      grid-template-columns: minmax(18.75rem, auto) 1fr;
-      grid-template-areas: "navbar mainContent";
 }
 
 .banner {
@@ -63,15 +82,23 @@ body {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: navbar;
-  position: relative;
+  position: fixed;
   padding: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-height: calc(100vh - 4.6875rem);
+  overflow-y: auto;
 }
 
 a {
   display: block;
   margin: 1rem 0;
-  padding: 0.3125rem;
-  background-color: #F0DB4F;
+  padding: 0 0.3125rem;
   color: #323330;
   text-decoration: none;
   font-weight: 600;

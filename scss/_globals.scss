@@ -17,14 +17,28 @@ body {
     color: $jet;
 }
 
-.flex-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
 .grid-display {
     display: grid;
-    grid-template-columns: minmax(18.75rem, auto) 1fr;
+    position: absolute;
+    margin-top: 4.6875rem;
+    grid-template-columns: minmax(20.3125rem, auto) 1fr; // 325px
     grid-template-areas: "navbar mainContent";
+}
+
+/*  SCROLLBAR  */
+
+::-webkit-scrollbar {
+    width: 0.625rem; // 10px
+}
+
+::-webkit-scrollbar-track {
+    background: $white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $jet;
+
+    &:hover {
+        background: $blackOlive;
+    }
 }

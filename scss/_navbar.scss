@@ -1,14 +1,18 @@
 .navbar {
     grid-area: navbar;
-    position: relative;
+    position: fixed;
     padding: 1.25rem; // 20px
+
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 4.6875rem);
+    overflow-y: auto;
 }
 
 a {
     display: block;
     margin: 1rem 0;
-    padding: 0.3125rem;
-    background-color: $minionYellow;
+    padding: 0 0.3125rem;
     color: $jet;
     text-decoration: none;
     font-weight: 600;
