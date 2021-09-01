@@ -13,19 +13,18 @@ body {
     padding: 0;
     line-height: 1.5;
     font-family: "Roboto", sans-serif;
-    background-color: $jet;
-    color: $white;
+    background-color: $white;
+    color: $jet;
+}
 
-    // SIDEBAR DISPLAY
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.grid-display {
     display: grid;
     grid-template-columns: minmax(18.75rem, auto) 1fr;
     grid-template-areas: "navbar mainContent";
-    grid-gap: 1.25rem;
-}
-
-a {
-    display: block;
-    margin: 1rem 0;
-    text-decoration: none;
-    color: $white;
 }

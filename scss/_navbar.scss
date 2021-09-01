@@ -1,11 +1,17 @@
-#navbar {
+.navbar {
     grid-area: navbar;
-    position: fixed;
+    position: relative;
     padding: 1.25rem; // 20px
+}
 
-    & img {
-        max-width: calc(18.75rem - 2*1.25rem); // 300px - 2*20px (padding)
-    }
+a {
+    display: block;
+    margin: 1rem 0;
+    padding: 0.3125rem;
+    background-color: $minionYellow;
+    color: $jet;
+    text-decoration: none;
+    font-weight: 600;
 }
 
 //.accent {}

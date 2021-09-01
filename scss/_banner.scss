@@ -1,0 +1,19 @@
+.banner {
+    position: fixed;
+    width: 100vw;
+    height: 4.6875rem; // 75px
+    z-index: 1;
+    background-color: $jet;
+
+    & img {
+        width: 3.125rem; // 50px
+        margin: 0.78125rem; // 12.5px
+        border-radius: 0.5rem; // 8px
+    }
+
+    & h3 {
+        display: inline;
+        margin-left: 0.78125rem;
+        color: $white;
+    }
+}
