@@ -1,12 +1,13 @@
 html {
     font-size: 100%;
     box-sizing: border-box;
+
+    scroll-behavior: smooth;
 }
 
 *, *::before, *::after {
     box-sizing: inherit;
 }
-
 
 body {
     margin: 0;
@@ -27,16 +28,18 @@ body {
 
 /*  SCROLLBAR  */
 
-::-webkit-scrollbar {
+::-webkit-scrollbar { // The entire scrollbar.
     width: 0.625rem; // 10px
+    height: 0.625rem;
 }
 
-::-webkit-scrollbar-track {
+::-webkit-scrollbar-track { // The track (progress bar) of the scrollbar, where there is usually a gray bar on top of a white bar.
     background: $white;
 }
 
-::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb { // The draggable scrolling handle.
     background: $jet;
+    min-height: 4.6875rem; // 75px
 
     &:hover {
         background: $blackOlive;

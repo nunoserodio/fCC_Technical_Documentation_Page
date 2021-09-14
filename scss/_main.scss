@@ -1,4 +1,208 @@
 main {
     grid-area: mainContent;
     position: relative;
+    max-width: calc(100vw - 20.3125rem);
+}
+
+.main-section {
+    width: 90%;
+    text-align: justify;
+    
+    // BANNER OVERLAP FIX
+    &::before {
+        content: "";
+        display: block;
+        height: 4.6875rem; 
+        margin-top: -4.6875rem;
+    }
+
+    a {
+        text-decoration: none;
+        font-weight: 600;
+        color: $jet;
+    }
+}
+
+header {
+    h1 {
+        background-color: $minionYellow;
+        padding: 0.5rem;
+        margin: 3.125rem 0 0 -0.5rem; // 50px
+        border-radius: 0.5rem;
+    }
+}
+
+.accent {
+    font-size: $fs-lg;
+    font-weight: 600;
+}
+
+.code-span {
+    color: $redCrayola;
+    background-color: $lavenderBlush;
+    padding: 0 0.1875rem; // 3px
+    font-size: $fs-md;
+}
+
+h2 {
+    margin-top: 3.125rem; // 50px
+}
+
+.code-container {
+    margin: 1rem 0;
+    padding: 1.25rem; // 20px
+    background-color: $lavenderBlush;
+    border-radius: 0.5rem;
+
+    .run-code {
+        margin-top: 1.25rem;
+        padding: 0 1rem 1rem;
+        background-color: $white;
+        
+        h3 {
+            margin: 0 -1rem 1rem;
+            padding: 1rem;
+            background-color: $jet;
+            color: $white;
+        }
+    }
+
+    p {
+        margin: 0 0 1rem;
+    }
+
+    h3 {
+        margin: 0;
+        padding: 1rem;
+        background-color: $jet;
+        color: $white;
+    }
+}
+
+
+pre {
+    margin: -19px 0rem -38px; // HIGHLIGHT.JS MARGIN FIX
+}
+
+.note {
+    position: relative;
+    margin: 1.5625rem 0; // 25px
+    background-color: $white;
+    width: calc(100% - 9.375rem); // 150px
+    min-height: 6.25rem;
+    left: 9.375rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &::before {
+        display: inline-block;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f059";
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+
+        font-size: $fs-xl;
+        color: $jet;
+        position: absolute;
+        left: -6.25rem; // 75rem
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .brackets {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1.5625rem;
+
+        &:after,
+        &:before {
+            content: '';
+            border: 0.5rem solid $jet; 
+            bottom: 0;
+            top: 0; // Fixes edges of squares to those of the container.
+            position: absolute; // Parent element behaves as if child is not there.
+            width: 5%;
+        }
+        
+        &:after {
+            border-left: none; // No longer a square.
+            right: 0;
+        }
+        
+        &:before {
+            border-right: none;
+            left: 0;
+        }
+    }
+
+    &.example {
+        p {
+            margin: 0 0 1rem;
+        }
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th, td {
+        text-align: left;
+        padding: 1rem;
+        border: 1px solid $blackOlive;
+    }
+
+    th:first-child, 
+    td:first-child {
+        width: 9.375rem;
+        min-width: 9.375rem;
+        max-width: 9.375rem;
+    }
+
+    td:first-child {
+        background-color: $lavenderBlush;
+    }
+}
+
+.flexbox {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+
+    *:nth-child(1) {
+        flex: 0 1 auto;
+    }
+
+    *:nth-child(2) {
+        flex: 1;
+    }
+
+    .pure-code {
+        max-width: 40%;
+    }
+}
+
+footer {
+    margin-top: 3.125rem;
+    padding: 0.5rem 0;
+    width: 90%;
+    background-color: $jet;
+    color: $white;
+    text-align: center;
+
+    h6 {
+        margin: 0.5rem;
+    }
+
+    a {
+        text-decoration: none;
+        font-weight: 600;
+        color: $white;
+    }
 }
