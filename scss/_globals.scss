@@ -26,14 +26,14 @@ body {
     grid-template-areas: "navbar mainContent";
 }
 
-/*  SCROLLBAR  */
+// SCROLLBAR
 
-::-webkit-scrollbar { // The entire scrollbar.
+::-webkit-scrollbar { // Styles for the entire scrollbar.
     width: 0.625rem; // 10px
     height: 0.625rem;
 }
 
-::-webkit-scrollbar-track { // The track (progress bar) of the scrollbar, where there is usually a gray bar on top of a white bar.
+::-webkit-scrollbar-track { // The track of the scrollbar, where there is usually a gray bar on top of a white column.
     background: $white;
 }
 
@@ -43,5 +43,19 @@ body {
 
     &:hover {
         background: $blackOlive;
+    }
+}
+
+// VISIBILITY
+
+.hide-for-mobile {
+    @include breakpoint-down(medium){
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+    @include breakpoint-up(large){
+        display: none;
     }
 }
