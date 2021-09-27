@@ -1,26 +1,38 @@
-.banner-flex {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
 .banner {
     position: fixed;
     width: 100vw;
     height: 4.6875rem; // 75px
-    z-index: 1;
+    padding: 0.78125rem; // 12.5px
     background-color: $jet;
 
     img {
         width: 3.125rem; // 50px
-        margin: 0.78125rem; // 12.5px
-        border-radius: 0.5rem; // 8px
+        border-radius: 0.5rem;
     }
 
     h4 {
         display: inline;
-        margin-left: 0.78125rem;
+        margin: 0 0.78125rem;
         color: $white;
         letter-spacing: 1.5px;
+    }
+}
+
+.banner-toggle {
+    margin-left: auto; // Trick to stick flex items to sides.
+    padding-right: 0.78125rem;
+
+    span {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: $white;
+        border-radius: 100px;
+        transition: all 300ms ease-in 0s;
+        transform-origin: 2.5px 1px;
+    }
+
+    span:not(:last-child) {
+        margin-bottom: 5px;
     }
 }

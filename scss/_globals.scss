@@ -18,12 +18,20 @@ body {
     color: $jet;
 }
 
+.flex-row {
+    display: flex;
+    align-items: center;
+}
+
 .grid-display {
     display: grid;
     position: absolute;
-    margin-top: 4.6875rem;
+    top: 4.6875rem;
+    bottom: 0;
+    overflow-y: scroll;
     grid-template-columns: minmax(20.3125rem, auto) 1fr; // 325px
     grid-template-areas: "navbar mainContent";
+    
 }
 
 // SCROLLBAR
