@@ -16,22 +16,15 @@ body {
     font-family: "Roboto", sans-serif;
     background-color: $white;
     color: $jet;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
 }
 
-.flex-row {
+.flex {
     display: flex;
     align-items: center;
-}
-
-.grid-display {
-    display: grid;
-    position: absolute;
-    top: 4.6875rem;
-    bottom: 0;
-    overflow-y: scroll;
-    grid-template-columns: minmax(20.3125rem, auto) 1fr; // 325px
-    grid-template-areas: "navbar mainContent";
-    
 }
 
 // SCROLLBAR

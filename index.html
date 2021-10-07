@@ -19,30 +19,34 @@
     <!-- EXTERNAL STYLESHEETS -->
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- PAGE TITLE -->
-    <title>JavaScript Tutorial</title>
-
     <!-- EXTERNAL HIGHLIGHT.JS STYLESHEETS // NIGHT OWL THEME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/night-owl.min.css" integrity="sha512-i5X6Fdn/ZqvGSqPrdMa3FgcpXM/Nr6YccSKFYT93zljl/HZDEpvBbE5Pxp91eiWGccZLrL/LDQJd7fjTRYsVaA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- PAGE TITLE -->
+    <title>JavaScript Tutorial</title>
 </head>
 
 <body>
-    <nav id="navbar" class="banner">
-        <div class="flex-row">
-            <img src="images/js_logo.png" alt="JavaScript logo">
+    <div class="page-header">
+        <div class="overlay fade"></div>
 
-            <h4>JavaScript Tutorial</h4>
+        <!---------- NAV BAR ---------->
+
+        <nav id="navbar" class="navbar flex">
+            <header class="flex">
+                <img src="images/js_logo.png" alt="JavaScript logo">
+
+                <h4>JavaScript Tutorial</h4>
+            </header>
             
-            <a href="#" id ="hamburger" class="banner-toggle hide-for-desktop">
+            <a href="#" id="hamburger" class="header-toggle hide-for-desktop">
                 <span></span>
                 <span></span>
                 <span></span>
             </a>
-        </div>
-    </nav>
+        </nav>
 
-    <div class="grid-display">
-        <nav id="navbar" class="navbar">
+        <div class="burger-menu fade">
             <a href="#Introduction" class="nav-link">Introduction</a>
             <a href="#What_can_JavaScript_do?" class="nav-link">What can JavaScript do?</a>
             <a href="#JavaScript_functions_&_events" class="nav-link">JavaScript functions & events</a>
@@ -55,6 +59,23 @@
             <a href="#JavaScript_Expressions" class="nav-link">JavaScript Expressions</a>
             <a href="#JavaScript_Comments" class="nav-link">JavaScript Comments</a>
             <a href="#JavaScript_Syntax" class="nav-link">JavaScript Syntax</a>
+        </div>
+    </div>
+
+    <div class="grid-display">
+        <nav id="nav-links" class="desktop-nav-links hide-for-mobile">
+            <a href="#Introduction" class="side-link">Introduction</a>
+            <a href="#What_can_JavaScript_do?" class="side-link">What can JavaScript do?</a>
+            <a href="#JavaScript_functions_&_events" class="side-link">JavaScript functions & events</a>
+            <a href="#Internal_JavaScript" class="side-link">Internal JavaScript</a>
+            <a href="#External_JavaScript" class="side-link">External JavaScript</a>
+            <a href="#JavaScript_Output" class="side-link">JavaScript Output</a>
+            <a href="#JavaScript_Statements" class="side-link">JavaScript Statements</a>
+            <a href="#JavaScript_Keywords" class="side-link">JavaScript Keywords</a>
+            <a href="#JavaScript_Values" class="side-link">JavaScript Values</a>
+            <a href="#JavaScript_Expressions" class="side-link">JavaScript Expressions</a>
+            <a href="#JavaScript_Comments" class="side-link">JavaScript Comments</a>
+            <a href="#JavaScript_Syntax" class="side-link">JavaScript Syntax</a>
         </nav>
 
         <main id="main-doc">
@@ -805,13 +826,13 @@ lastname = "Peterson";
                 <h6>&copy; Web design by <a target="_blank" href="https://github.com/nunoserodio">Nuno</a></h6>
             </footer>
         </main>
-
-        <!---------- HIGHLIGHT.JS EMBED SCRIPT ---------->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js" integrity="sha512-W7EehcwtSbRF63FIQlXEOOd5mnq0Et0V0nUOvwcUvjnCKgOLLYbqriQxEQSp63sfrkryxIg/A/O8v8O18QwQCQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-        <script src="/js/script.js"></script>
-
-        <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
     </div>
+
+    <!---------- HIGHLIGHT.JS EMBED SCRIPT ---------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js" integrity="sha512-W7EehcwtSbRF63FIQlXEOOd5mnq0Et0V0nUOvwcUvjnCKgOLLYbqriQxEQSp63sfrkryxIg/A/O8v8O18QwQCQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="/js/script.js"></script>
+
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
 </body>
 </html>

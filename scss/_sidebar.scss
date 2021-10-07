@@ -1,0 +1,19 @@
+.desktop-nav-links {
+    grid-area: nav-links;
+    position: fixed;
+    padding: 1.25rem; // 20px
+
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 4.6875rem);
+    overflow-y: auto;
+
+    a {
+        display: block;
+        margin: 1rem 0;
+        padding: 0 0.3125rem; // 5px
+        color: $jet;
+        text-decoration: none;
+        font-weight: 600;
+    }
+}

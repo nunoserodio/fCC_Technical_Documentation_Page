@@ -1,3 +1,57 @@
+@-webkit-keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  -webkit-animation: fade-in 200ms ease-in-out forwards;
+          animation: fade-in 200ms ease-in-out forwards;
+}
+
+@-webkit-keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  -webkit-animation: fade-out 200ms ease-in-out forwards;
+          animation: fade-out 200ms ease-in-out forwards;
+}
+
 html {
   font-size: 100%;
   -webkit-box-sizing: border-box;
@@ -19,25 +73,17 @@ body {
   color: #323330;
 }
 
-.flex-row {
+body.no-scroll {
+  overflow: hidden;
+}
+
+.flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.grid-display {
-  display: -ms-grid;
-  display: grid;
-  position: absolute;
-  top: 4.6875rem;
-  bottom: 0;
-  overflow-y: scroll;
-  -ms-grid-columns: minmax(20.3125rem, auto) 1fr;
-      grid-template-columns: minmax(20.3125rem, auto) 1fr;
-      grid-template-areas: "navbar mainContent";
 }
 
 ::-webkit-scrollbar {
@@ -70,32 +116,35 @@ body {
   }
 }
 
-.banner {
+.navbar {
   position: fixed;
+  z-index: 2;
   width: 100vw;
   height: 4.6875rem;
   padding: 0.78125rem;
   background-color: #323330;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
-.banner img {
+.navbar header {
+  margin-right: auto;
+}
+
+.navbar img {
   width: 3.125rem;
   border-radius: 0.5rem;
 }
 
-.banner h4 {
+.navbar h4 {
   display: inline;
   margin: 0 0.78125rem;
   color: #FAFAFF;
-  letter-spacing: 1.5px;
+  letter-spacing: 3px;
 }
 
-.banner-toggle {
-  margin-left: auto;
-  padding-right: 0.78125rem;
-}
-
-.banner-toggle span {
+.header-toggle span {
   display: block;
   width: 25px;
   height: 2px;
@@ -107,14 +156,68 @@ body {
           transform-origin: 2.5px 1px;
 }
 
-.banner-toggle span:not(:last-child) {
+.header-toggle span:not(:last-child) {
   margin-bottom: 5px;
 }
 
-.navbar {
+.page-header.open .header-toggle > span:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.page-header.open .header-toggle > span:nth-child(2) {
+  opacity: 0;
+}
+
+.page-header.open .header-toggle > span:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.fade {
+  visibility: hidden;
+}
+
+.overlay {
+  background-color: #323330;
+  position: fixed;
+  top: 4.6875rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+}
+
+.burger-menu {
+  position: absolute;
+  opacity: 0;
+  top: 4.6875rem;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.burger-menu a {
+  display: block;
+  margin: 0 auto;
+  padding: 1rem;
+  width: 100vw;
+  text-align: center;
+  color: #323330;
+  background-color: #FAFAFF;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.burger-menu a:not(:last-child) {
+  border-bottom: 1.5px solid var(--white);
+}
+
+.desktop-nav-links {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  grid-area: navbar;
+  grid-area: nav-links;
   position: fixed;
   padding: 1.25rem;
   display: -webkit-box;
@@ -128,13 +231,25 @@ body {
   overflow-y: auto;
 }
 
-.navbar a {
+.desktop-nav-links a {
   display: block;
   margin: 1rem 0;
   padding: 0 0.3125rem;
   color: #323330;
   text-decoration: none;
   font-weight: 600;
+}
+
+.grid-display {
+  display: -ms-grid;
+  display: grid;
+  position: absolute;
+  top: 4.6875rem;
+  bottom: 0;
+  overflow-y: scroll;
+  -ms-grid-columns: minmax(20.3125rem, auto) 1fr;
+      grid-template-columns: minmax(20.3125rem, auto) 1fr;
+      grid-template-areas: "nav-links mainContent";
 }
 
 main {

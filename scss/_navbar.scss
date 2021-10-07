@@ -1,19 +1,106 @@
 .navbar {
-    grid-area: navbar;
     position: fixed;
-    padding: 1.25rem; // 20px
+    z-index: 2;
+    width: 100vw;
+    height: 4.6875rem; // 75px
+    padding: 0.78125rem ; // 12.5px
+    background-color: $jet;
+    justify-content: flex-end;
 
-    display: flex;
-    flex-direction: column;
-    max-height: calc(100vh - 4.6875rem);
-    overflow-y: auto;
+    header {
+        margin-right: auto; // Sticks flex item to right side.
+    }
+
+    img {
+        width: 3.125rem; // 50px
+        border-radius: 0.5rem;
+    }
+
+    h4 {
+        display: inline;
+        margin: 0 0.78125rem; // 12.5px
+        color: $white;
+        letter-spacing: 3px;
+    }
+}
+
+// PRE ANIMATION HAMBURGER MENU
+
+.header-toggle {
+    span {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: $white;
+        border-radius: 100px;
+        transition: all 300ms ease-in 0s;
+        transform-origin: 2.5px 1px;
+
+        &:not(:last-child) {
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.page-header {
+    
+    // POST ANIMATION HAMBURGER MENU
+
+    &.open {
+        .header-toggle {
+            > span:first-child {
+                transform: rotate(45deg);
+            }
+
+            > span:nth-child(2) {
+                opacity: 0;
+            }
+
+            > span:last-child {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
+
+.fade {
+    visibility: hidden;
+}
+
+// WEBSITE OVERLAY WHILE HAMBURGER MENU IS OPEN
+
+.overlay {
+    background-color: $jet;
+    position: fixed;
+    top: 4.6875rem; // 75px
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+}
+
+.burger-menu {
+    position: absolute;
+    opacity: 0;
+    top: 4.6875rem; // 75px;
+    right: 0;
+    left: 0;
+    z-index: 1;
 
     a {
         display: block;
-        margin: 1rem 0;
-        padding: 0 0.3125rem; // 5px
+        margin: 0 auto;
+        padding: 1rem;
+        width: 100vw;
+        text-align: center;
         color: $jet;
+        background-color: $white;
         text-decoration: none;
         font-weight: 600;
+
+        &:not(:last-child) {
+            border-bottom: 1.5px solid var(--white);
+        }
     }
 }
