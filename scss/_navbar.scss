@@ -24,7 +24,7 @@
     }
 }
 
-// PRE ANIMATION HAMBURGER MENU
+// PRE ANIMATION HAMBURGER TOGGLE
 
 .header-toggle {
     span {
@@ -44,41 +44,24 @@
 
 .page-header {
     
-    // POST ANIMATION HAMBURGER MENU
+    // POST ANIMATION HAMBURGER TOGGLE
 
-    &.open {
-        .header-toggle {
-            > span:first-child {
-                transform: rotate(45deg);
-            }
+    &.open .header-toggle {
+        > span:first-child {
+            transform: rotate(45deg);
+        }
 
-            > span:nth-child(2) {
-                opacity: 0;
-            }
+        > span:nth-child(2) {
+            opacity: 0;
+        }
 
-            > span:last-child {
-                transform: rotate(-45deg);
-            }
+        > span:last-child {
+            transform: rotate(-45deg);
         }
     }
 }
 
-.fade {
-    visibility: hidden;
-}
-
 // WEBSITE OVERLAY WHILE HAMBURGER MENU IS OPEN
-
-// .overlay {
-//     background-color: $jet;
-//     position: fixed;
-//     top: 4.6875rem; // 75px
-//     right: 0;
-//     bottom: 0;
-//     left: 0;
-//     z-index: 1;
-//     opacity: 0;
-// }
 
 .burger-menu {
     position: absolute;
@@ -87,19 +70,16 @@
     right: 0;
     left: 0;
     height: 0%;
-
     background-color: $minionYellow;
 
     a {
         display: block;
-        opacity: 0;
-        z-index: 2;
+        visibility: hidden;
+        width: 100%;
         margin: 0 auto;
         padding: 1rem;
-        width: 100vw;
         text-align: center;
         color: $jet;
-        background-color: $white;
         text-decoration: none;
         font-weight: 600;
     }
