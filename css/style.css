@@ -1,3 +1,57 @@
+@-webkit-keyframes drop-down {
+  from {
+    visibility: hidden;
+    height: 0%;
+  }
+  to {
+    visibility: visible;
+    height: 100%;
+  }
+}
+
+@keyframes drop-down {
+  from {
+    visibility: hidden;
+    height: 0%;
+  }
+  to {
+    visibility: visible;
+    height: 100%;
+  }
+}
+
+.drop-down {
+  -webkit-animation: drop-down 500ms ease forwards;
+          animation: drop-down 500ms ease forwards;
+}
+
+@-webkit-keyframes close-drop-down {
+  from {
+    visibility: visible;
+    height: 100%;
+  }
+  to {
+    visibility: hidden;
+    height: 0%;
+  }
+}
+
+@keyframes close-drop-down {
+  from {
+    visibility: visible;
+    height: 100%;
+  }
+  to {
+    visibility: hidden;
+    height: 0%;
+  }
+}
+
+.close-drop-down {
+  -webkit-animation: close-drop-down 500ms ease forwards;
+          animation: close-drop-down 500ms ease forwards;
+}
+
 @-webkit-keyframes fade-in {
   from {
     visibility: hidden;
@@ -21,8 +75,8 @@
 }
 
 .fade-in {
-  -webkit-animation: fade-in 200ms ease-in-out forwards;
-          animation: fade-in 200ms ease-in-out forwards;
+  -webkit-animation: fade-in 500ms ease-in-out forwards;
+          animation: fade-in 500ms ease-in-out forwards;
 }
 
 @-webkit-keyframes fade-out {
@@ -48,8 +102,8 @@
 }
 
 .fade-out {
-  -webkit-animation: fade-out 200ms ease-in-out forwards;
-          animation: fade-out 200ms ease-in-out forwards;
+  -webkit-animation: fade-out 500ms ease-in-out forwards;
+          animation: fade-out 500ms ease-in-out forwards;
 }
 
 html {
@@ -178,28 +232,20 @@ body.no-scroll {
   visibility: hidden;
 }
 
-.overlay {
-  background-color: #323330;
-  position: fixed;
-  top: 4.6875rem;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  opacity: 0;
-}
-
 .burger-menu {
   position: absolute;
-  opacity: 0;
+  z-index: 1;
   top: 4.6875rem;
   right: 0;
   left: 0;
-  z-index: 1;
+  height: 0%;
+  background-color: #F0DB4F;
 }
 
 .burger-menu a {
   display: block;
+  opacity: 0;
+  z-index: 2;
   margin: 0 auto;
   padding: 1rem;
   width: 100vw;
@@ -208,10 +254,6 @@ body.no-scroll {
   background-color: #FAFAFF;
   text-decoration: none;
   font-weight: 600;
-}
-
-.burger-menu a:not(:last-child) {
-  border-bottom: 1.5px solid var(--white);
 }
 
 .desktop-nav-links {
@@ -258,6 +300,7 @@ main {
   grid-area: mainContent;
   position: relative;
   max-width: calc(100vw - 20.3125rem);
+  overflow-x: hidden;
 }
 
 .main-section {

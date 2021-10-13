@@ -12,6 +12,7 @@ main {
     grid-area: mainContent;
     position: relative;
     max-width: calc(100vw - 20.3125rem);
+    overflow-x: hidden;
 }
 
 .main-section {

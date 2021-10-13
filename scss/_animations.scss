@@ -1,5 +1,37 @@
 // HAMBURGER TOGGLE ANIMATION
 
+@keyframes drop-down {
+  from {
+    visibility: hidden;
+    height: 0%;
+  }
+
+  to {
+    visibility: visible;
+    height: 100%;
+  }
+}
+
+.drop-down {
+  animation: drop-down 500ms ease forwards;
+}
+
+@keyframes close-drop-down {
+  from {
+    visibility: visible;
+    height: 100%;
+  }
+
+  to {
+    visibility: hidden;
+    height: 0%;
+  }
+}
+
+.close-drop-down {
+animation: close-drop-down 500ms ease forwards;
+}
+
 @keyframes fade-in {
     from {
       visibility: hidden;
@@ -13,7 +45,7 @@
 }
   
 .fade-in {
-    animation: fade-in 200ms ease-in-out forwards;
+    animation: fade-in 500ms ease-in-out forwards;
 }
 
 @keyframes fade-out {
@@ -29,5 +61,5 @@
 }
 
 .fade-out {
-animation: fade-out 200ms ease-in-out forwards;
+animation: fade-out 500ms ease-in-out forwards;
 }
