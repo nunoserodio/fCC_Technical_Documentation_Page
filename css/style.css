@@ -141,17 +141,6 @@ body.no-scroll {
 }
 
 ::-webkit-scrollbar {
-  display: none;
-}
-
-.body {
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
-}
-
-::-webkit-scrollbar {
   width: 0.625rem;
   height: 0.625rem;
 }
@@ -247,6 +236,7 @@ body.no-scroll {
   left: 0;
   height: 0%;
   background-color: #F0DB4F;
+  overflow-y: hidden;
 }
 
 .burger-menu a {
