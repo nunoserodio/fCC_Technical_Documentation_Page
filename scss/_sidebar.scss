@@ -3,26 +3,19 @@
     top: 4.6875rem; // 75px
     left: 0;
     bottom: 0;
-    width: 18.75rem; // 300px
-    padding: 1.25rem; // 20px
-    background: $white;
+    width: 17.1875rem; // 275px
+    background-color: $lavenderBlush;
     overflow-y: auto;
 
     a {
         display: block;
-        padding: 0.625rem 0.3125rem; // 10px, 5px
+        padding: 1.25rem; // 20px
         color: $jet;
         text-decoration: none;
         font-weight: 600;
 
-        // padding: 1rem;
-        // text-align: center;
-        // color: $jet;
-        // text-decoration: none;
-        // font-weight: 600;
-
-        &:not(:first-child):not(:last-child){
-            margin: 0.625rem 0; // 10px
+        &:hover{
+            background-color: $lavenderAccent;
         }
     }
 }
