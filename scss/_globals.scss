@@ -34,9 +34,9 @@ body {
     height: 0.625rem;
 }
 
-::-webkit-scrollbar-track { // The track of the scrollbar, where there is usually a gray bar on top of a white column.
-    background: $white;
-}
+// ::-webkit-scrollbar-track { // The track of the scrollbar, where there is usually a gray bar on top of a white column.
+//     background: $white;
+// }
 
 ::-webkit-scrollbar-thumb { // The draggable scrolling handle.
     background: $jet;
@@ -52,6 +52,14 @@ body {
 .hide-for-mobile {
     @include breakpoint-down(medium){
         display: none;
+    }
+}
+
+.fit-for-mobile {
+    @include breakpoint-down(medium){
+        left: 0;
+        max-width: 100%;
+        padding: 0 1.25rem 0 2.5rem; // 20px, 40px
     }
 }
 

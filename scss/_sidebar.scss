@@ -1,19 +1,28 @@
-.desktop-nav-links {
-    grid-area: nav-links;
+.desktop-navbar {
     position: fixed;
+    top: 4.6875rem; // 75px
+    left: 0;
+    bottom: 0;
+    width: 18.75rem; // 300px
     padding: 1.25rem; // 20px
-
-    display: flex;
-    flex-direction: column;
-    max-height: calc(100vh - 4.6875rem);
+    background: $white;
     overflow-y: auto;
 
     a {
         display: block;
-        margin: 1rem 0;
-        padding: 0 0.3125rem; // 5px
+        padding: 0.625rem 0.3125rem; // 10px, 5px
         color: $jet;
         text-decoration: none;
         font-weight: 600;
+
+        // padding: 1rem;
+        // text-align: center;
+        // color: $jet;
+        // text-decoration: none;
+        // font-weight: 600;
+
+        &:not(:first-child):not(:last-child){
+            margin: 0.625rem 0; // 10px
+        }
     }
 }

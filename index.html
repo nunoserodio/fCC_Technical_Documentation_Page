@@ -29,9 +29,9 @@
 <body>
     <div class="page-header">
 
-        <!---------- NAV BAR ---------->
+        <!---------- MOBILE NAV BAR ---------->
 
-        <nav id="navbar" class="navbar flex">
+        <nav id="navbar" class="flex">
             <header class="flex">
                 <img src="images/js_logo.png" alt="JavaScript logo">
 
@@ -63,771 +63,771 @@
         </div>
     </div>
 
-    <div class="grid-display">
-        <nav id="nav-links" class="desktop-nav-links hide-for-mobile">
-            <a href="#Introduction" class="side-link">Introduction</a>
-            <a href="#What_can_JavaScript_do?" class="side-link">What can JavaScript do?</a>
-            <a href="#JavaScript_functions_&_events" class="side-link">JavaScript functions & events</a>
-            <a href="#Internal_JavaScript" class="side-link">Internal JavaScript</a>
-            <a href="#External_JavaScript" class="side-link">External JavaScript</a>
-            <a href="#JavaScript_Output" class="side-link">JavaScript Output</a>
-            <a href="#JavaScript_Statements" class="side-link">JavaScript Statements</a>
-            <a href="#JavaScript_Keywords" class="side-link">JavaScript Keywords</a>
-            <a href="#JavaScript_Values" class="side-link">JavaScript Values</a>
-            <a href="#JavaScript_Expressions" class="side-link">JavaScript Expressions</a>
-            <a href="#JavaScript_Comments" class="side-link">JavaScript Comments</a>
-            <a href="#JavaScript_Syntax" class="side-link">JavaScript Syntax</a>
-        </nav>
+    <!---------- DESKTOP NAV BAR ---------->
 
-        <main id="main-doc">
-            <section id="Introduction" class="main-section">
-                <header>
-                    <h1>Introduction</h1>
-                </header>
+    <nav class="desktop-navbar hide-for-mobile">
+        <a href="#Introduction" class="side-link">Introduction</a>
+        <a href="#What_can_JavaScript_do?" class="side-link">What can JavaScript do?</a>
+        <a href="#JavaScript_functions_&_events" class="side-link">JavaScript functions & events</a>
+        <a href="#Internal_JavaScript" class="side-link">Internal JavaScript</a>
+        <a href="#External_JavaScript" class="side-link">External JavaScript</a>
+        <a href="#JavaScript_Output" class="side-link">JavaScript Output</a>
+        <a href="#JavaScript_Statements" class="side-link">JavaScript Statements</a>
+        <a href="#JavaScript_Keywords" class="side-link">JavaScript Keywords</a>
+        <a href="#JavaScript_Values" class="side-link">JavaScript Values</a>
+        <a href="#JavaScript_Expressions" class="side-link">JavaScript Expressions</a>
+        <a href="#JavaScript_Comments" class="side-link">JavaScript Comments</a>
+        <a href="#JavaScript_Syntax" class="side-link">JavaScript Syntax</a>
+    </nav>
 
-                <p>JavaScript is a scripting language that can be connected to the objects of its host environment (e.g. a web browser) to provide programmatic control over them.<br>
-                <br>
-                It is one of the 3 languages all web developers must learn:</p>
-                <ol>
-                    <li>HTML to define the content of web pages;</li>
-                    <li>CSS to specify their layout;</li>
-                    <li>JavaScript to program their behaviour.</li>
-                </ol>
-            </section>
+    <main id="main-doc" class="fit-for-mobile">
+        <section id="Introduction" class="main-section">
+            <header>
+                <h1>Introduction</h1>
+            </header>
 
-            <section id="What_can_JavaScript_do?" class="main-section">
-                <header>
-                    <h1>What can JavaScript do?</h1>
-                </header>
+            <p>JavaScript is a scripting language that can be connected to the objects of its host environment (e.g. a web browser) to provide programmatic control over them.<br>
+            <br>
+            It is one of the 3 languages all web developers must learn:</p>
+            <ol>
+                <li>HTML to define the content of web pages;</li>
+                <li>CSS to specify their layout;</li>
+                <li>JavaScript to program their behaviour.</li>
+            </ol>
+        </section>
 
-                <h2>JavaScript can change HTML content</h2>
+        <section id="What_can_JavaScript_do?" class="main-section">
+            <header>
+                <h1>What can JavaScript do?</h1>
+            </header>
 
-                <p>One of many JavaScript HTML <span class="accent">methods</span> (actions that can be performed on objects) is <code class="code-span">getElementById()</code>.<br>
-                <br>
-                The example below "finds" an HTML element (with <code class="code-span">id="content-id"</code>), and changes the element content (<code class="code-span">innerHTML</code>) to "Hello JavaScript":</p>
-                
-                <div class="code-container">
-                    <div class="pure-code">
-                        <pre>
-                            <code class="language-html">
+            <h2>JavaScript can change HTML content</h2>
+
+            <p>One of many JavaScript HTML <span class="accent">methods</span> (actions that can be performed on objects) is <code class="code-span">getElementById()</code>.<br>
+            <br>
+            The example below "finds" an HTML element (with <code class="code-span">id="content-id"</code>), and changes the element content (<code class="code-span">innerHTML</code>) to "Hello JavaScript":</p>
+            
+            <div class="code-container">
+                <div class="pure-code">
+                    <pre>
+                        <code class="language-html">
 &lt;!DOCTYPE html>
 &lt;html>
-    &lt;body>
+&lt;body>
 
-        &lt;p id="content-id">JavaScript can change HTML content.&lt;/p>
+    &lt;p id="content-id">JavaScript can change HTML content.&lt;/p>
 
-        &lt;button type="button" onclick='document.getElementById("content-id").innerHTML = "Hello JavaScript!"'>Click Me!&lt;/button>
+    &lt;button type="button" onclick='document.getElementById("content-id").innerHTML = "Hello JavaScript!"'>Click Me!&lt;/button>
 
-    &lt;/body>
+&lt;/body>
 &lt;/html>
-                            </code>
-                        </pre>
-                    </div>
-
-                    <div class="run-code">
-                        <h3>Try it!</h3>
-
-                        <code class="preview">
-                            <p id="content-id">JavaScript can change HTML content.</p>
-                                    
-                            <button type="button" onclick='document.getElementById("content-id").innerHTML = "Hello JavaScript!"'>Click Me!</button>
                         </code>
-                    </div>
+                    </pre>
                 </div>
 
-                <div class="note example">
-                    <div class="brackets">
-                        <p>JavaScript accepts both double and single quotes:</p>
+                <div class="run-code">
+                    <h3>Try it!</h3>
 
-                        <pre>
-                            <code class="language-javascript">
+                    <code class="preview">
+                        <p id="content-id">JavaScript can change HTML content.</p>
+                                
+                        <button type="button" onclick='document.getElementById("content-id").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+                    </code>
+                </div>
+            </div>
+
+            <div class="note example">
+                <div class="brackets">
+                    <p>JavaScript accepts both double and single quotes:</p>
+
+                    <pre>
+                        <code class="language-javascript">
 document.getElementById('content-id').innerHTML = 'Hello JavaScript';
-                            </code>
-                        </pre>
-                    </div>
+                        </code>
+                    </pre>
                 </div>
+            </div>
 
-                <h2>JavaScript can change HTML attribute values</h2>
+            <h2>JavaScript can change HTML attribute values</h2>
 
-                <p>In this example, JavaScript changes the value of the <code class="code-span">src</code> (source) attribute of an <code class="code-span">&lt;img></code> tag:</p>
+            <p>In this example, JavaScript changes the value of the <code class="code-span">src</code> (source) attribute of an <code class="code-span">&lt;img></code> tag:</p>
 
-                <div class="code-container">
-                    <div class="pure-code">
-                        <pre>
-                            <code class="language-html">
+            <div class="code-container">
+                <div class="pure-code">
+                    <pre>
+                        <code class="language-html">
 &lt;!DOCTYPE html>
 &lt;html>
-    &lt;body>
+&lt;body>
 
-        &lt;button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light&lt;/button>
+    &lt;button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light&lt;/button>
 
-        &lt;img id="myImage" src="pic_bulboff.gif" style="width:100px">
+    &lt;img id="myImage" src="pic_bulboff.gif" style="width:100px">
 
-        &lt;button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light&lt;/button>
+    &lt;button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light&lt;/button>
 
-    &lt;/body>
+&lt;/body>
 &lt;/html>
-                            </code>
-                        </pre>
-                    </div>
-
-                    <div class="run-code">
-                        <h3>Try it!</h3>
-
-                        <code class="preview">
-                            <button onclick="document.getElementById('myImage').src='/images/pic_bulbon.gif'">Turn on the light</button>
-
-                            <img id="myImage" src="/images/pic_bulboff.gif" style="width:100px">
-
-                            <button onclick="document.getElementById('myImage').src='/images/pic_bulboff.gif'">Turn off the light</button>
                         </code>
-                    </div>
+                    </pre>
                 </div>
 
-                <h2>JavaScript can change HTML styles (CSS)</h2>
+                <div class="run-code">
+                    <h3>Try it!</h3>
 
-                <p>Changing the style of an HTML element is a variant of changing an HTML attribute:</p>
-                
-                <pre>
-                    <code class="language-javascript">
+                    <code class="preview">
+                        <button onclick="document.getElementById('myImage').src='/images/pic_bulbon.gif'">Turn on the light</button>
+
+                        <img id="myImage" src="/images/pic_bulboff.gif" style="width:100px">
+
+                        <button onclick="document.getElementById('myImage').src='/images/pic_bulboff.gif'">Turn off the light</button>
+                    </code>
+                </div>
+            </div>
+
+            <h2>JavaScript can change HTML styles (CSS)</h2>
+
+            <p>Changing the style of an HTML element is a variant of changing an HTML attribute:</p>
+            
+            <pre>
+                <code class="language-javascript">
 document.getElementById("demo").style.fontSize = "35px";
-                    </code>
-                </pre>
+                </code>
+            </pre>
 
-                <h2>JavaScript can hide or show HTML elements</h2>
+            <h2>JavaScript can hide or show HTML elements</h2>
 
-                <p>Hiding HTML elements can be done by changing the <code class="code-span">display</code> style:</p>
-                <pre>
-                    <code class="language-javascript">
+            <p>Hiding HTML elements can be done by changing the <code class="code-span">display</code> style:</p>
+            <pre>
+                <code class="language-javascript">
 document.getElementById("demo").style.display = "none";
-                    </code>
-                </pre>
+                </code>
+            </pre>
 
-                <p>Showing hidden HTML elements can also be done by changing the <code class="code-span">display</code> style:</p>
-                <pre>
-                    <code class="language-javascript">
+            <p>Showing hidden HTML elements can also be done by changing the <code class="code-span">display</code> style:</p>
+            <pre>
+                <code class="language-javascript">
 document.getElementById("demo").style.display = "block";
-                    </code>
-                </pre>
-            </section>
+                </code>
+            </pre>
+        </section>
 
-            <section id="JavaScript_functions_&_events" class="main-section">
-                <header>
-                    <h1>JavaScript functions & events</h1>
-                </header>
+        <section id="JavaScript_functions_&_events" class="main-section">
+            <header>
+                <h1>JavaScript functions & events</h1>
+            </header>
 
-                <p>A JavaScript <code class="code-span">function</code> is a block of JavaScript code, that can be executed when "called" for. For example, a function can be called when an event occurs, like when the user clicks a button.</p>
-            </section>
+            <p>A JavaScript <code class="code-span">function</code> is a block of JavaScript code, that can be executed when "called" for. For example, a function can be called when an event occurs, like when the user clicks a button.</p>
+        </section>
 
-            <section id="Internal_JavaScript" class="main-section">
-                <header>
-                    <h1>Internal JavaScript</h1>
-                </header>
+        <section id="Internal_JavaScript" class="main-section">
+            <header>
+                <h1>Internal JavaScript</h1>
+            </header>
 
-                <h2>The &lt;script> tag</h2>
+            <h2>The &lt;script> tag</h2>
 
-                <p>In HTML, JavaScript code is inserted between <code class="code-span">&lt;script></code> and <code class="code-span">&lt;/script></code> tags.</p>
-        
-                <h2>JavaScript in &lt;head> or &lt;body></h2>
-        
-                <p>You can place any number of scripts in the <code class="code-span">&lt;body></code> or <code class="code-span">&lt;head></code> sections of an HTML page.<br>
-                <br>
-                The best practice is to put JavaScript just before the closing <code class="code-span">&lt;/body></code> tag rather than in the <code class="code-span">&lt;head></code> section of your HTML. The reason for this is that HTML loads from top to bottom. The head loads first, then the body, and then everything inside the body.<br>
-                <br>
-                In this example, a JavaScript <code class="code-span">function</code> is placed in the <code class="code-span">&lt;body></code> section of an HTML page. The function is invoked (called) when a button is clicked:</p>
-                
-                <div class="code-container">
-                    <div class="pure-code">
-                        <pre>
-                            <code class="language-html">
+            <p>In HTML, JavaScript code is inserted between <code class="code-span">&lt;script></code> and <code class="code-span">&lt;/script></code> tags.</p>
+    
+            <h2>JavaScript in &lt;head> or &lt;body></h2>
+    
+            <p>You can place any number of scripts in the <code class="code-span">&lt;body></code> or <code class="code-span">&lt;head></code> sections of an HTML page.<br>
+            <br>
+            The best practice is to put JavaScript just before the closing <code class="code-span">&lt;/body></code> tag rather than in the <code class="code-span">&lt;head></code> section of your HTML. The reason for this is that HTML loads from top to bottom. The head loads first, then the body, and then everything inside the body.<br>
+            <br>
+            In this example, a JavaScript <code class="code-span">function</code> is placed in the <code class="code-span">&lt;body></code> section of an HTML page. The function is invoked (called) when a button is clicked:</p>
+            
+            <div class="code-container">
+                <div class="pure-code">
+                    <pre>
+                        <code class="language-html">
 &lt;!DOCTYPE html>
 &lt;html>
-    &lt;body>
+&lt;body>
 
-        &lt;p id="function-id">A Paragraph&lt;/p>
-        &lt;button type="button" onclick="myFunction()">Try it&lt;/button>
+    &lt;p id="function-id">A Paragraph&lt;/p>
+    &lt;button type="button" onclick="myFunction()">Try it&lt;/button>
 
-        &lt;script>
-            function myFunction() {
-                document.getElementById("function-id").innerHTML = "Paragraph changed.";
-            }
-        &lt;/script>
+    &lt;script>
+        function myFunction() {
+            document.getElementById("function-id").innerHTML = "Paragraph changed.";
+        }
+    &lt;/script>
 
-    &lt;/body>
+&lt;/body>
 &lt;/html>                            
-                            </code>
-                        </pre>
-                    </div>
-        
-                    <div class="run-code">
-                        <h3>Try it!</h3>
-
-                        <code class="preview">
-                            <p id="function-id">A Paragraph</p>
-                            <button type="button" onclick="myFunction()">Try it</button>
-
-                            <script>
-                                function myFunction() {
-                                    document.getElementById("function-id").innerHTML = "Paragraph changed.";
-                                }
-                            </script>
                         </code>
-                    </div>
+                    </pre>
                 </div>
-            </section>
+    
+                <div class="run-code">
+                    <h3>Try it!</h3>
 
-            <section id="External_JavaScript" class="main-section">
-                <header>
-                    <h1>External JavaScript</h1>
-                </header>
+                    <code class="preview">
+                        <p id="function-id">A Paragraph</p>
+                        <button type="button" onclick="myFunction()">Try it</button>
 
-                <p>Scripts can also be placed in external files. The script will behave as if it was located exactly where the <code class="code-span">&lt;script></script></code> tag is located.<br>
-                <br>
-                To use an external script, put the name of the script file in the <code class="code-span">src</code> (source) attribute of a <code class="code-span">&lt;script></code> tag:</p>
-                <pre>
-                    <code class="language-html">
-&lt;script src="myScript.js">&lt;/script>
+                        <script>
+                            function myFunction() {
+                                document.getElementById("function-id").innerHTML = "Paragraph changed.";
+                            }
+                        </script>
                     </code>
-                </pre>
+                </div>
+            </div>
+        </section>
 
-                <div class="code-container">
-                    <p>JavaScript files have the file extension <span class="accent">.js</span>.</p>
+        <section id="External_JavaScript" class="main-section">
+            <header>
+                <h1>External JavaScript</h1>
+            </header>
 
-                    <h3>External file: myScript.js</h3>
+            <p>Scripts can also be placed in external files. The script will behave as if it was located exactly where the <code class="code-span">&lt;script></script></code> tag is located.<br>
+            <br>
+            To use an external script, put the name of the script file in the <code class="code-span">src</code> (source) attribute of a <code class="code-span">&lt;script></code> tag:</p>
+            <pre>
+                <code class="language-html">
+&lt;script src="myScript.js">&lt;/script>
+                </code>
+            </pre>
 
-                    <div class="pure-code">
-                        <pre>
-                            <code class="language-javascript">
+            <div class="code-container">
+                <p>JavaScript files have the file extension <span class="accent">.js</span>.</p>
+
+                <h3>External file: myScript.js</h3>
+
+                <div class="pure-code">
+                    <pre>
+                        <code class="language-javascript">
 function myFunction() {
 document.getElementById("demo").innerHTML = "Paragraph changed.";
 }  
-                            </code>
-                        </pre>
-                    </div>
+                        </code>
+                    </pre>
                 </div>
+            </div>
 
-                <div class="note">
-                    <div class="brackets">
-                        <p>External scripts cannot contain <code class="code-span">&lt;script></script></code> tags.</p>
-                    </div>
+            <div class="note">
+                <div class="brackets">
+                    <p>External scripts cannot contain <code class="code-span">&lt;script></script></code> tags.</p>
                 </div>
+            </div>
 
-                <h2>External JavaScript advantages</h2>
+            <h2>External JavaScript advantages</h2>
 
-                <p>Placing scripts in external files has some advantages:</p>
-                <ul>
-                    <li>It separates HTML and code</li>
-                    <li>It makes HTML and JavaScript easier to read and maintain</li>
-                    <li>Cached JavaScript files can speed up page loads.</li>
-                </ul>
+            <p>Placing scripts in external files has some advantages:</p>
+            <ul>
+                <li>It separates HTML and code</li>
+                <li>It makes HTML and JavaScript easier to read and maintain</li>
+                <li>Cached JavaScript files can speed up page loads.</li>
+            </ul>
 
-                <p>To add several script files to one page, use several script tags:</p>
-                <pre>
-                    <code class="language-html">
+            <p>To add several script files to one page, use several script tags:</p>
+            <pre>
+                <code class="language-html">
 &lt;script src="myScript1.js">&lt;/script>
 &lt;script src="myScript2.js">&lt;/script>
-                    </code>
-                </pre>
-            </section>
+                </code>
+            </pre>
+        </section>
 
-            <section id="JavaScript_Output" class="main-section">
-                <header>
-                    <h1>JavaScript Output</h1>
-                </header>
+        <section id="JavaScript_Output" class="main-section">
+            <header>
+                <h1>JavaScript Output</h1>
+            </header>
 
-                <p>JavaScript can "display" data in different ways:</p>
-                <ul>
-                    <li>Writing into an HTML element, using <code class="code-span">innerHTML</code> (See "<a href="#What_can_JavaScript_do?" class="nav-link">What can JavaScript do?</a>" section).</li>
-                    <li>Writing into the HTML output using <code class="code-span">document.write()</code>.</li>
-                    <li>Writing into an alert box, using <code class="code-span">window.alert()</code>.</li>
-                    <li>Writing into the browser console, using <code class="code-span">console.log()</code>.</li>
-                </ul>
-                
-                <h2>Using document.write()</h2>
+            <p>JavaScript can "display" data in different ways:</p>
+            <ul>
+                <li>Writing into an HTML element, using <code class="code-span">innerHTML</code> (See "<a href="#What_can_JavaScript_do?" class="nav-link">What can JavaScript do?</a>" section).</li>
+                <li>Writing into the HTML output using <code class="code-span">document.write()</code>.</li>
+                <li>Writing into an alert box, using <code class="code-span">window.alert()</code>.</li>
+                <li>Writing into the browser console, using <code class="code-span">console.log()</code>.</li>
+            </ul>
+            
+            <h2>Using document.write()</h2>
 
-                <p>The <code class="code-span">document.write()</code> method writes HTML expressions or JavaScript code to a document and is commonly used for testing purposes.</p>
+            <p>The <code class="code-span">document.write()</code> method writes HTML expressions or JavaScript code to a document and is commonly used for testing purposes.</p>
 
-                <div class="code-container">
-                    <div class="pure-code">
-                        <pre>
-                            <code class="language-html">
+            <div class="code-container">
+                <div class="pure-code">
+                    <pre>
+                        <code class="language-html">
 &lt;!DOCTYPE html>
 &lt;html>
-    &lt;body>
+&lt;body>
 
-        &lt;script>
-            document.write(5 + 6);
-        &lt;/script>
+    &lt;script>
+        document.write(5 + 6);
+    &lt;/script>
 
-    &lt;/body>
+&lt;/body>
 &lt;/html>
-                            </code>
-                        </pre>
-                    </div>
-
-                    <div class="run-code">
-                        <h3>Try it!</h3>
-
-                        <script>document.write(5 + 6);</script>
-                    </div>
-                </div>
-                
-                <div class="note">
-                    <div class="brackets">
-                        <p>Using <code class="code-span">document.write()</code> after an HTML document is loaded will delete all existing HTML.</p>
-                    </div>
+                        </code>
+                    </pre>
                 </div>
 
-                <h2>Using window.alert()</h2>
+                <div class="run-code">
+                    <h3>Try it!</h3>
 
-                <p>The <code class="code-span">window.alert()</code> method displays an alert box with a specified message and an OK button.</p>
-                
-                <div class="note">
-                    <div class="brackets">
-                        <p>In JavaScript, the window object is the global scope object, which means that variables, properties, and methods belong to the window object by default. This also means that specifying the <code class="code-span">window</code> keyword is optional.</p>
-                    </div>
+                    <script>document.write(5 + 6);</script>
                 </div>
+            </div>
+            
+            <div class="note">
+                <div class="brackets">
+                    <p>Using <code class="code-span">document.write()</code> after an HTML document is loaded will delete all existing HTML.</p>
+                </div>
+            </div>
 
-                <div class="code-container">
-                    <div class="pure-code">
-                        <pre>
-                            <code class="language-html">
+            <h2>Using window.alert()</h2>
+
+            <p>The <code class="code-span">window.alert()</code> method displays an alert box with a specified message and an OK button.</p>
+            
+            <div class="note">
+                <div class="brackets">
+                    <p>In JavaScript, the window object is the global scope object, which means that variables, properties, and methods belong to the window object by default. This also means that specifying the <code class="code-span">window</code> keyword is optional.</p>
+                </div>
+            </div>
+
+            <div class="code-container">
+                <div class="pure-code">
+                    <pre>
+                        <code class="language-html">
 &lt;!DOCTYPE html>
 &lt;html>
-    &lt;body>
+&lt;body>
 
-        &lt;button type="button" onclick="window.alert(5 + 6)">Try it&lt;/button>
+    &lt;button type="button" onclick="window.alert(5 + 6)">Try it&lt;/button>
 
-    &lt;/body>
+&lt;/body>
 &lt;/html>
-                            </code>
-                        </pre>
-                    </div>
-
-                    <div class="run-code">
-                        <h3>Try it!</h3>
-
-                        <button type="button" onclick="window.alert(5 + 6)">Try it</button>
-                    </div>
+                        </code>
+                    </pre>
                 </div>
 
-                <h2>Using console.log()</h2>
+                <div class="run-code">
+                    <h3>Try it!</h3>
 
-                <p>The <code class="code-span">console.log()</code> method writes a message to the console, which is useful for debugging purposes.</p>
+                    <button type="button" onclick="window.alert(5 + 6)">Try it</button>
+                </div>
+            </div>
 
-                <div class="code-container">
-                    <div class="pure-code">
-                        <pre>
-                            <code class="language-html">
+            <h2>Using console.log()</h2>
+
+            <p>The <code class="code-span">console.log()</code> method writes a message to the console, which is useful for debugging purposes.</p>
+
+            <div class="code-container">
+                <div class="pure-code">
+                    <pre>
+                        <code class="language-html">
 &lt;!DOCTYPE html>
 &lt;html>
-    &lt;body>
+&lt;body>
 
-        &lt;button type="button" onclick="console.log(5 + 6)">Try it!&lt;/button>
+    &lt;button type="button" onclick="console.log(5 + 6)">Try it!&lt;/button>
 
-    &lt;/body>
+&lt;/body>
 &lt;/html>
-                            </code>
-                        </pre>
-                    </div>
-
-                    <div class="run-code">
-                        <h3>Try it!</h3>
-
-                        <button type="button" onclick="console.log(5 + 6)">Try it</button>
-                    </div>
+                        </code>
+                    </pre>
                 </div>
-            </section>
 
-            <section id="JavaScript_Statements" class="main-section">
-                <header>
-                    <h1>JavaScript Statements</h1>
-                </header>
+                <div class="run-code">
+                    <h3>Try it!</h3>
 
-                <p>A <span class="accent">computer program</span> is a list of "instructions" to be "executed" by a computer. In a programming language, these programming instructions are called <span class="accent">statements</span>.<br>
-                <br>
-                A JavaScript program is a list of programming statements. JavaScript statements are composed of:</p>
+                    <button type="button" onclick="console.log(5 + 6)">Try it</button>
+                </div>
+            </div>
+        </section>
 
-                <ul>
-                    <li>Values, Operators, Expressions, Keywords, and Comments.</li>
-                </ul>
+        <section id="JavaScript_Statements" class="main-section">
+            <header>
+                <h1>JavaScript Statements</h1>
+            </header>
 
-                <p>This statement tells the browser to write "Hello Dolly." inside an HTML element with <code class="code-span">id="demo"</code>:</p>
-                <pre>
-                    <code class="language-javascript">
+            <p>A <span class="accent">computer program</span> is a list of "instructions" to be "executed" by a computer. In a programming language, these programming instructions are called <span class="accent">statements</span>.<br>
+            <br>
+            A JavaScript program is a list of programming statements. JavaScript statements are composed of:</p>
+
+            <ul>
+                <li>Values, Operators, Expressions, Keywords, and Comments.</li>
+            </ul>
+
+            <p>This statement tells the browser to write "Hello Dolly." inside an HTML element with <code class="code-span">id="demo"</code>:</p>
+            <pre>
+                <code class="language-javascript">
 document.getElementById("demo").innerHTML = "Hello Dolly.";
-                    </code>
-                </pre>
+                </code>
+            </pre>
 
-                <p>Most JavaScript programs contain many JavaScript statements. These are executed, one by one, in the same order as they are written.</p>
+            <p>Most JavaScript programs contain many JavaScript statements. These are executed, one by one, in the same order as they are written.</p>
 
-                <h2>Semicolons ;</h2>
+            <h2>Semicolons ;</h2>
 
-                <p>Semicolons separate JavaScript statements.<br>
-                <br>
-                Add a semicolon at the end of each executable statement:</p>
-                <pre>
-                    <code class="language-javascript">
+            <p>Semicolons separate JavaScript statements.<br>
+            <br>
+            Add a semicolon at the end of each executable statement:</p>
+            <pre>
+                <code class="language-javascript">
 let a, b, c;  // Declare 3 variables
 a = 5;        // Assign the value 5 to a
 b = 6;        // Assign the value 6 to b
 c = a + b;    // Assign the sum of a and b to c
-                    </code>
-                </pre>
+                </code>
+            </pre>
 
-                <p>When separated by semicolons, multiple statements on one line are allowed:</p>
-                <pre>
-                    <code class="language-javascript">
+            <p>When separated by semicolons, multiple statements on one line are allowed:</p>
+            <pre>
+                <code class="language-javascript">
 a = 5; b = 6; c = a + b;
-                    </code>
-                </pre>
+                </code>
+            </pre>
 
-                <h2>JavaScript White Space</h2>
+            <h2>JavaScript White Space</h2>
 
-                <p>JavaScript ignores multiple spaces. You can add white space to your script to make it more readable.<br>
-                <br>
-                The following lines are equivalent:</p>
-                <pre>
-                    <code class="langugae-javascript">
+            <p>JavaScript ignores multiple spaces. You can add white space to your script to make it more readable.<br>
+            <br>
+            The following lines are equivalent:</p>
+            <pre>
+                <code class="langugae-javascript">
 let person = "Hege";
 let person="Hege";
-                    </code>
-                </pre>
+                </code>
+            </pre>
 
-                <p>A good practice is to put spaces around operators ( <code class="code-span">= + - * /</code> ):</p>
-                <pre>
-                    <code class="language-javascript">
+            <p>A good practice is to put spaces around operators ( <code class="code-span">= + - * /</code> ):</p>
+            <pre>
+                <code class="language-javascript">
 let x = y + z;
-                    </code>
-                </pre>
+                </code>
+            </pre>
 
-                <h2>JavaScript Line Length and Line Breaks</h2>
+            <h2>JavaScript Line Length and Line Breaks</h2>
 
-                <p>For best readability, programmers often like to avoid code lines longer than 80 characters. If a JavaScript statement does not fit on one line, the best place to break it is after an operator:</p>
-                <pre>
-                    <code class="language-javascript">
+            <p>For best readability, programmers often like to avoid code lines longer than 80 characters. If a JavaScript statement does not fit on one line, the best place to break it is after an operator:</p>
+            <pre>
+                <code class="language-javascript">
 document.getElementById("demo").innerHTML =
 "Hello Dolly!";
-                    </code>
-                </pre>
+                </code>
+            </pre>
 
-                <h2>JavaScript Code Blocks</h2>
+            <h2>JavaScript Code Blocks</h2>
 
-                <p>JavaScript statements can be grouped together in code blocks, inside curly brackets <code class="code-span">{...}</code>. The purpose of code blocks is to define statements to be executed together.<br>
-                <br>
-                One place you will find statements grouped together in blocks, is in JavaScript functions:</p>
-                <pre>
-                    <code class="language-javascript">
+            <p>JavaScript statements can be grouped together in code blocks, inside curly brackets <code class="code-span">{...}</code>. The purpose of code blocks is to define statements to be executed together.<br>
+            <br>
+            One place you will find statements grouped together in blocks, is in JavaScript functions:</p>
+            <pre>
+                <code class="language-javascript">
 function myFunction() {
-    document.getElementById("demo1").innerHTML = "Hello Dolly!";
-    document.getElementById("demo2").innerHTML = "How are you?";
+document.getElementById("demo1").innerHTML = "Hello Dolly!";
+document.getElementById("demo2").innerHTML = "How are you?";
 }                      
-                    </code>
-                </pre>
-            </section>
+                </code>
+            </pre>
+        </section>
 
-            <section id="JavaScript_Keywords" class="main-section">
-                <header>
-                    <h1>JavaScript Keywords</h1>
-                </header>
+        <section id="JavaScript_Keywords" class="main-section">
+            <header>
+                <h1>JavaScript Keywords</h1>
+            </header>
 
-                <p>JavaScript statements often start with a <span class="accent">keyword</span> to identify the JavaScript action to be performed.</p>
+            <p>JavaScript statements often start with a <span class="accent">keyword</span> to identify the JavaScript action to be performed.</p>
 
-                <table>
-                    <tr>
-                        <th>Keyword</th>
-                        <th>Description</th>
-                    </tr>
-                    <tr>
-                        <td><code class="code-span">var</code></td>
-                        <td>Declares a variable.</td>
-                    </tr>
-                    <tr>
-                        <td><code class="code-span">let</code></td>
-                        <td>Declares a block variable.</td>
-                    </tr>
-                    <tr>
-                        <td><code class="code-span">const</code></td>
-                        <td>Declares a block constant.</td>
-                    </tr>
-                    <tr>
-                        <td><code class="code-span">if</code></td>
-                        <td>Marks a block of statements to be executed on a condition.</td>
-                    </tr>
-                    <tr>
-                        <td><code class="code-span">switch</code></td>
-                        <td>Marks a block of statements to be executed in different cases.</td>
-                    </tr>
-                    <tr>
-                        <td><code class="code-span">for</code></td>
-                        <td>Marks a block of statements to be executed in a loop.</td>
-                    </tr>
-                    <tr>
-                        <td><code class="code-span">function</code></td>
-                        <td>Declares a function.</td>
-                    </tr>
-                    <tr>
-                        <td><code class="code-span">return</code></td>
-                        <td>Exits a function.</td>
-                    </tr>
-                    <tr>
-                        <td><code class="code-span">try</code></td>
-                        <td>Implements error handling to a block of statements.</td>
-                    </tr>
-                </table>
+            <table>
+                <tr>
+                    <th>Keyword</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><code class="code-span">var</code></td>
+                    <td>Declares a variable.</td>
+                </tr>
+                <tr>
+                    <td><code class="code-span">let</code></td>
+                    <td>Declares a block variable.</td>
+                </tr>
+                <tr>
+                    <td><code class="code-span">const</code></td>
+                    <td>Declares a block constant.</td>
+                </tr>
+                <tr>
+                    <td><code class="code-span">if</code></td>
+                    <td>Marks a block of statements to be executed on a condition.</td>
+                </tr>
+                <tr>
+                    <td><code class="code-span">switch</code></td>
+                    <td>Marks a block of statements to be executed in different cases.</td>
+                </tr>
+                <tr>
+                    <td><code class="code-span">for</code></td>
+                    <td>Marks a block of statements to be executed in a loop.</td>
+                </tr>
+                <tr>
+                    <td><code class="code-span">function</code></td>
+                    <td>Declares a function.</td>
+                </tr>
+                <tr>
+                    <td><code class="code-span">return</code></td>
+                    <td>Exits a function.</td>
+                </tr>
+                <tr>
+                    <td><code class="code-span">try</code></td>
+                    <td>Implements error handling to a block of statements.</td>
+                </tr>
+            </table>
 
-                <div class="note">
-                    <div class="brackets">
-                        <p>JavaScript keywords are reserved words. Reserved words cannot be used as names for variables.</p>
-                    </div>
+            <div class="note">
+                <div class="brackets">
+                    <p>JavaScript keywords are reserved words. Reserved words cannot be used as names for variables.</p>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="JavaScript_Values" class="main-section">
-                <header>
-                    <h1>JavaScript Values</h1>
-                </header>
+        <section id="JavaScript_Values" class="main-section">
+            <header>
+                <h1>JavaScript Values</h1>
+            </header>
 
-                <p>The JavaScript syntax defines two types of values:</p>
-                <ul>
-                    <li>Fixed values</li>
-                    <li>Variable values</li>
-                </ul>
-                
-                <p>Fixed values are called <span class="accent">literals</span>.<br>
-                Variable values are called <span class="accent">variables</span>.</p>
+            <p>The JavaScript syntax defines two types of values:</p>
+            <ul>
+                <li>Fixed values</li>
+                <li>Variable values</li>
+            </ul>
+            
+            <p>Fixed values are called <span class="accent">literals</span>.<br>
+            Variable values are called <span class="accent">variables</span>.</p>
 
-                <h2>JavaScript Literals</h2>
-                
-                <p>The two most important syntax rules for fixed values are:</p>
+            <h2>JavaScript Literals</h2>
+            
+            <p>The two most important syntax rules for fixed values are:</p>
 
-                <ol>
-                    <li>
-                        <div class="flexbox">
-                            <p>Numbers are written with or without decimals:</p>
+            <ol>
+                <li>
+                    <div class="flexbox">
+                        <p>Numbers are written with or without decimals:</p>
 
-                            <div class="pure-code">
-                                <pre>
-                                    <code class="language-javascript">
+                        <div class="pure-code">
+                            <pre>
+                                <code class="language-javascript">
 10.50
 1001
-                                    </code>
-                                </pre>
-                            </div>
+                                </code>
+                            </pre>
                         </div>
-                    </li>
+                    </div>
+                </li>
 
-                    <li>
-                        <div class="flexbox">
-                            <p>Strings are text, written within double or single quotes:</p>
+                <li>
+                    <div class="flexbox">
+                        <p>Strings are text, written within double or single quotes:</p>
 
-                            <div class="pure-code">
-                                <pre>
-                                    <code class="language-javascript">
+                        <div class="pure-code">
+                            <pre>
+                                <code class="language-javascript">
 "John Doe"
 'John Doe'
-                                    </code>
-                                </pre>
-                            </div>
+                                </code>
+                            </pre>
                         </div>
-                    </li>
-                </ol>
+                    </div>
+                </li>
+            </ol>
 
-                <h2>JavaScript Variables</h2>
+            <h2>JavaScript Variables</h2>
 
-                <p>In a programming language, <span class="accent">variables</span> are used to <span class="accent">store data values</span>.<br>
-                <br>
-                JavaScript uses the keywords <code class="code-span">var</code>, <code class="code-span">let</code> and <code class="code-span">const</code> to <span class="accent">declare</span> variables. An <span class="accent">equal sign</span> is used to <span class="accent">assign values</span> to variables.</p>
+            <p>In a programming language, <span class="accent">variables</span> are used to <span class="accent">store data values</span>.<br>
+            <br>
+            JavaScript uses the keywords <code class="code-span">var</code>, <code class="code-span">let</code> and <code class="code-span">const</code> to <span class="accent">declare</span> variables. An <span class="accent">equal sign</span> is used to <span class="accent">assign values</span> to variables.</p>
 
-                <div class="flexbox">
-                <p>In this example, x is defined as a variable. Then, x is assigned (given) the value 6:</p>
+            <div class="flexbox">
+            <p>In this example, x is defined as a variable. Then, x is assigned (given) the value 6:</p>
 
-                    <pre class="pure-code">
-                        <code class="language-javascript">
+                <pre class="pure-code">
+                    <code class="language-javascript">
 let x;
 x = 6;
-                        </code>
-                    </pre>
-                </div>
-            </section>
+                    </code>
+                </pre>
+            </div>
+        </section>
 
-            <section id="JavaScript_Expressions" class="main-section">
-                <header>
-                    <h1>JavaScript Expressions</h1>
-                </header>
+        <section id="JavaScript_Expressions" class="main-section">
+            <header>
+                <h1>JavaScript Expressions</h1>
+            </header>
 
-                <p>An <span class="accent">expression</span> is a combination of values, variables, and operators, which computes to a value. The computation is called an <span class="accent">evaluation</span>.<br>
-                <br>
-                For example, 5 * 10 evaluates to 50:</p>
+            <p>An <span class="accent">expression</span> is a combination of values, variables, and operators, which computes to a value. The computation is called an <span class="accent">evaluation</span>.<br>
+            <br>
+            For example, 5 * 10 evaluates to 50:</p>
 
-                <div class="code-container">
-                    <div class="pure-code">
-                        <pre>
-                            <code class="language-html">
+            <div class="code-container">
+                <div class="pure-code">
+                    <pre>
+                        <code class="language-html">
 &lt;!DOCTYPE html>
 &lt;html>
-    &lt;body>
+&lt;body>
 
-        &lt;p id="evaluation">&lt;/p>
+    &lt;p id="evaluation">&lt;/p>
 
-        &lt;script>
-        document.getElementById("evaluation").innerHTML = 5 * 10;
-        &lt;/script>
+    &lt;script>
+    document.getElementById("evaluation").innerHTML = 5 * 10;
+    &lt;/script>
 
-    &lt;/body>
+&lt;/body>
 &lt;/html>
-                            </code>
-                        </pre>
-                    </div>
-
-                    <div class="run-code">
-                        <h3>Try it!</h3>
-
-                        <code class="preview">
-                            <p id="evaluation"></p>
-                            <script>
-                            document.getElementById("evaluation").innerHTML = 5 * 10;
-                            </script>
                         </code>
-                    </div>
+                    </pre>
                 </div>
 
-                <div class="flexbox">
-                    <p>Expressions can also contain variable values:</p>
+                <div class="run-code">
+                    <h3>Try it!</h3>
 
-                    <pre class="pure-code">
-                        <code class="language-javascript">
+                    <code class="preview">
+                        <p id="evaluation"></p>
+                        <script>
+                        document.getElementById("evaluation").innerHTML = 5 * 10;
+                        </script>
+                    </code>
+                </div>
+            </div>
+
+            <div class="flexbox">
+                <p>Expressions can also contain variable values:</p>
+
+                <pre class="pure-code">
+                    <code class="language-javascript">
 x * 10
-                        </code>
-                    </pre>
-                </div>
+                    </code>
+                </pre>
+            </div>
 
-                <div class="flexbox">
-                    <p>The values can be of various types, such as numbers and strings.<br>
-                    For example, <code class="code-span">"John" + " " + "Doe"</code>, evaluates to:</p>
+            <div class="flexbox">
+                <p>The values can be of various types, such as numbers and strings.<br>
+                For example, <code class="code-span">"John" + " " + "Doe"</code>, evaluates to:</p>
 
-                    <pre class="pure-code">
-                        <code class="language-javascript">
+                <pre class="pure-code">
+                    <code class="language-javascript">
 "John Doe"
-                        </code>
-                    </pre>
-                </div>
-            </section>
+                    </code>
+                </pre>
+            </div>
+        </section>
 
-            <section id="JavaScript_Comments" class="main-section">
-                <header>
-                    <h1>JavaScript Comments</h1>
-                </header>
+        <section id="JavaScript_Comments" class="main-section">
+            <header>
+                <h1>JavaScript Comments</h1>
+            </header>
 
-                <p>Comments are lines of code that JavaScript will intentionally ignore. They are a great way to leave notes to yourself and to other people who will later need to figure out what that code does.<br>
-                <br>
-                There are two ways to write comments in JavaScript:</p>
-                <ul>
-                    <li>
-                        <div class="flexbox">
-                            <p>Using <code class="code-span">//</code> will tell JavaScript to ignore the remainder of the text on the current line. This is an in-line comment:</p>
+            <p>Comments are lines of code that JavaScript will intentionally ignore. They are a great way to leave notes to yourself and to other people who will later need to figure out what that code does.<br>
+            <br>
+            There are two ways to write comments in JavaScript:</p>
+            <ul>
+                <li>
+                    <div class="flexbox">
+                        <p>Using <code class="code-span">//</code> will tell JavaScript to ignore the remainder of the text on the current line. This is an in-line comment:</p>
 
-                            <div class="pure-code">
-                                <pre>
-                                    <code class="language-javascript">
+                        <div class="pure-code">
+                            <pre>
+                                <code class="language-javascript">
 // This is an in-line comment.
-                                    </code>
-                                </pre>
-                            </div>
+                                </code>
+                            </pre>
                         </div>
-                    </li>
+                    </div>
+                </li>
 
-                    <li>
-                        <div class="flexbox">
-                            <p>You can make a multi-line comment beginning with <code class="code-span">/*</code> and ending with <code class="code-span">*/</code>. This is a multi-line comment:</p>
+                <li>
+                    <div class="flexbox">
+                        <p>You can make a multi-line comment beginning with <code class="code-span">/*</code> and ending with <code class="code-span">*/</code>. This is a multi-line comment:</p>
 
-                            <div class="pure-code">
-                                <pre>
-                                    <code class="language-javascript">
+                        <div class="pure-code">
+                            <pre>
+                                <code class="language-javascript">
 /* This is a
 multi-line comment */
-                                    </code>
-                                </pre>
-                            </div>
+                                </code>
+                            </pre>
                         </div>
-                    </li>
-                </ul>
-
-                <div class="note">
-                    <div class="brackets">
-                        <p>As you write code, you should regularly add comments to clarify the function of parts of your code. Good commenting can help both you and other people figure out what your code does.</p>
                     </div>
+                </li>
+            </ul>
+
+            <div class="note">
+                <div class="brackets">
+                    <p>As you write code, you should regularly add comments to clarify the function of parts of your code. Good commenting can help both you and other people figure out what your code does.</p>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="JavaScript_Syntax" class="main-section">
-                <header>
-                    <h1>JavaScript Syntax</h1>
-                </header>
+        <section id="JavaScript_Syntax" class="main-section">
+            <header>
+                <h1>JavaScript Syntax</h1>
+            </header>
 
-                <h2>JavaScript Identifiers</h2>
+            <h2>JavaScript Identifiers</h2>
 
-                <p>Identifiers are names. In JavaScript, identifiers are used to name variables (and keywords, and functions, and labels.<br>
-                The first character must be a letter, or an underscore (_), or a dollar sign ($). Subsequent characters may be letters, digits, underscores, or dollar signs.</p>
+            <p>Identifiers are names. In JavaScript, identifiers are used to name variables (and keywords, and functions, and labels.<br>
+            The first character must be a letter, or an underscore (_), or a dollar sign ($). Subsequent characters may be letters, digits, underscores, or dollar signs.</p>
 
-                <div class="note">
-                    <div class="brackets">
-                        <p>Numbers are not allowed as the first character. This way, JavaScript can easily distinguish identifiers from numbers.</p>
-                    </div>
+            <div class="note">
+                <div class="brackets">
+                    <p>Numbers are not allowed as the first character. This way, JavaScript can easily distinguish identifiers from numbers.</p>
                 </div>
+            </div>
 
-                <h2>JavaScript is case sensitive</h2>
+            <h2>JavaScript is case sensitive</h2>
 
-                <p>All JavaScript identifiers are case sensitive.<br>
-                <br>
-                The variables lastName and lastname, are two different variables:</p>
-                <pre>
-                    <code class="language-javascript">
+            <p>All JavaScript identifiers are case sensitive.<br>
+            <br>
+            The variables lastName and lastname, are two different variables:</p>
+            <pre>
+                <code class="language-javascript">
 let lastname, lastName;
 lastName = "Doe";
 lastname = "Peterson";                    
-                    </code>
-                </pre>
+                </code>
+            </pre>
 
-                <p>JavaScript does not interpret <span class="code-span">LET</span> or <span class="code-span">Let</span> as the keyword <span class="code-span">let</span>.</p>
+            <p>JavaScript does not interpret <span class="code-span">LET</span> or <span class="code-span">Let</span> as the keyword <span class="code-span">let</span>.</p>
 
-                <h2>JavaScript and Camel Case</h2>
+            <h2>JavaScript and Camel Case</h2>
 
-                <p>Historically, programmers have used different ways of joining multiple words into one variable name:</p>
-                <table>
-                    <tr>
-                        <th></th>
-                        <th>Example</th>
-                        <th></th>
-                    </tr>
-                    <tr>
-                        <td>Hyphens</td>
-                        <td><code class="code-span">first-name</code>, <code class="code-span">last-name</code>, <code class="code-span">master-card</code>, <code class="code-span">inter-city</code></td>
-                        <td><span class="accent">Hyphens are not allowed in JavaScript. They are reserved for subtractions.</span></td>
-                    </tr>
-                    <tr>
-                        <td>Underscore</td>
-                        <td><code class="code-span">first_name</code>, <code class="code-span">last_name</code>, <code class="code-span">master_card</code>, <code class="code-span">inter_city</code></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Upper Camel Case (Pascal Case)</td>
-                        <td><code class="code-span">FirstName</code>, <code class="code-span">LastName</code>, <code class="code-span">MasterCard</code>, <code class="code-span">InterCity</code></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Lower Camel Case</td>
-                        <td><code class="code-span">firstName</code>, <code class="code-span">lastName</code>, <code class="code-span">masterCard</code>, <code class="code-span">interCity</code></td>
-                        <td>JavaScript programmers tend to use camel case that starts with a lowercase letter.</td>
-                    </tr>
-                </table>
-            </section>
+            <p>Historically, programmers have used different ways of joining multiple words into one variable name:</p>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Example</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Hyphens</td>
+                    <td><code class="code-span">first-name</code>, <code class="code-span">last-name</code>, <code class="code-span">master-card</code>, <code class="code-span">inter-city</code></td>
+                    <td><span class="accent">Hyphens are not allowed in JavaScript. They are reserved for subtractions.</span></td>
+                </tr>
+                <tr>
+                    <td>Underscore</td>
+                    <td><code class="code-span">first_name</code>, <code class="code-span">last_name</code>, <code class="code-span">master_card</code>, <code class="code-span">inter_city</code></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Upper Camel Case (Pascal Case)</td>
+                    <td><code class="code-span">FirstName</code>, <code class="code-span">LastName</code>, <code class="code-span">MasterCard</code>, <code class="code-span">InterCity</code></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Lower Camel Case</td>
+                    <td><code class="code-span">firstName</code>, <code class="code-span">lastName</code>, <code class="code-span">masterCard</code>, <code class="code-span">interCity</code></td>
+                    <td>JavaScript programmers tend to use camel case that starts with a lowercase letter.</td>
+                </tr>
+            </table>
+        </section>
 
-            <footer>
-                <h6>&copy; Web design by <a target="_blank" href="https://github.com/nunoserodio">Nuno</a></h6>
-            </footer>
-        </main>
-    </div>
+        <footer>
+            <h6>&copy; Web design by <a target="_blank" href="https://github.com/nunoserodio">Nuno</a></h6>
+        </footer>
+    </main>
 
     <!---------- HIGHLIGHT.JS EMBED SCRIPT ---------->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js" integrity="sha512-W7EehcwtSbRF63FIQlXEOOd5mnq0Et0V0nUOvwcUvjnCKgOLLYbqriQxEQSp63sfrkryxIg/A/O8v8O18QwQCQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

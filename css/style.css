@@ -145,10 +145,6 @@ body.no-scroll {
   height: 0.625rem;
 }
 
-::-webkit-scrollbar-track {
-  background: #FAFAFF;
-}
-
 ::-webkit-scrollbar-thumb {
   background: #323330;
   min-height: 4.6875rem;
@@ -164,15 +160,23 @@ body.no-scroll {
   }
 }
 
+@media (max-width: 63.9375em) {
+  .fit-for-mobile {
+    left: 0;
+    max-width: 100%;
+    padding: 0 1.25rem 0 2.5rem;
+  }
+}
+
 @media (min-width: 64em) {
   .hide-for-desktop {
     display: none;
   }
 }
 
-.navbar {
+#navbar {
   position: fixed;
-  z-index: 2;
+  z-index: 1;
   width: 100vw;
   height: 4.6875rem;
   padding: 0.78125rem;
@@ -182,20 +186,20 @@ body.no-scroll {
           justify-content: flex-end;
 }
 
-.navbar header {
+#navbar header {
   margin-right: auto;
 }
 
-.navbar img {
+#navbar img {
   width: 3.125rem;
   border-radius: 0.5rem;
 }
 
-.navbar h4 {
+#navbar h4 {
   display: inline;
-  margin: 0 0.78125rem;
+  margin: 0 1.5625rem;
   color: #FAFAFF;
-  letter-spacing: 3px;
+  letter-spacing: 2.5px;
 }
 
 .header-toggle span {
@@ -251,55 +255,41 @@ body.no-scroll {
   font-weight: 600;
 }
 
-.desktop-nav-links {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: nav-links;
+.desktop-navbar {
   position: fixed;
+  top: 4.6875rem;
+  left: 0;
+  bottom: 0;
+  width: 18.75rem;
   padding: 1.25rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  max-height: calc(100vh - 4.6875rem);
+  background: #FAFAFF;
   overflow-y: auto;
 }
 
-.desktop-nav-links a {
+.desktop-navbar a {
   display: block;
-  margin: 1rem 0;
-  padding: 0 0.3125rem;
+  padding: 0.625rem 0.3125rem;
   color: #323330;
   text-decoration: none;
   font-weight: 600;
 }
 
-.grid-display {
-  display: -ms-grid;
-  display: grid;
-  position: absolute;
-  top: 4.6875rem;
-  bottom: 0;
-  overflow-y: scroll;
-  -ms-grid-columns: minmax(20.3125rem, auto) 1fr;
-      grid-template-columns: minmax(20.3125rem, auto) 1fr;
-      grid-template-areas: "nav-links mainContent";
+.desktop-navbar a:not(:first-child):not(:last-child) {
+  margin: 0.625rem 0;
 }
 
 main {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: mainContent;
   position: relative;
-  max-width: calc(100vw - 20.3125rem);
+  top: 4.6875rem;
+  left: 18.75rem;
+  max-width: calc(100% - 18.75rem);
+  padding: 0 3.125rem 0 3.75rem;
   overflow-x: hidden;
 }
 
 .main-section {
-  width: 90%;
+  margin: 0;
+  width: 100%;
   text-align: justify;
 }
 

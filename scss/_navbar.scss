@@ -1,6 +1,6 @@
-.navbar {
+#navbar {
     position: fixed;
-    z-index: 2;
+    z-index: 1;
     width: 100vw;
     height: 4.6875rem; // 75px
     padding: 0.78125rem ; // 12.5px
@@ -18,9 +18,9 @@
 
     h4 {
         display: inline;
-        margin: 0 0.78125rem; // 12.5px
+        margin: 0 1.5625rem; // 25px
         color: $white;
-        letter-spacing: 3px;
+        letter-spacing: 2.5px;
     }
 }
 

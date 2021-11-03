@@ -1,22 +1,15 @@
-.grid-display {
-    display: grid;
-    position: absolute;
-    top: 4.6875rem; // 75px
-    bottom: 0;
-    overflow-y: scroll;
-    grid-template-columns: minmax(20.3125rem, auto) 1fr; // 325px
-    grid-template-areas: "nav-links mainContent";
-}
-
 main {
-    grid-area: mainContent;
     position: relative;
-    max-width: calc(100vw - 20.3125rem);
+    top: 4.6875rem; // 75px
+    left: 18.75rem; // 300px
+    max-width: calc(100% - 18.75rem);
+    padding: 0 3.125rem 0 3.75rem; // 50px, 60px
     overflow-x: hidden;
 }
 
 .main-section {
-    width: 90%;
+    margin: 0;
+    width: 100%;
     text-align: justify;
     
     // BANNER OVERLAP FIX
