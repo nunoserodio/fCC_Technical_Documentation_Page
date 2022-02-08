@@ -5,7 +5,7 @@
   }
   to {
     visibility: visible;
-    height: 42rem;
+    height: 100%;
   }
 }
 
@@ -16,7 +16,7 @@
   }
   to {
     visibility: visible;
-    height: 42rem;
+    height: 100%;
   }
 }
 
@@ -28,7 +28,7 @@
 @-webkit-keyframes close-drop-down {
   from {
     visibility: visible;
-    height: 42rem;
+    height: 100%;
   }
   to {
     visibility: hidden;
@@ -39,7 +39,7 @@
 @keyframes close-drop-down {
   from {
     visibility: visible;
-    height: 42rem;
+    height: 100%;
   }
   to {
     visibility: hidden;
@@ -127,7 +127,7 @@ body {
   color: #323330;
 }
 
-body.no-scroll {
+.no-scroll {
   overflow: hidden;
 }
 
@@ -163,7 +163,7 @@ body.no-scroll {
   .fit-for-mobile {
     left: 0;
     max-width: 100%;
-    padding: 0 1.25rem 0 2.5rem;
+    padding: 0 1.875rem 0 2.5rem;
   }
 }
 
@@ -236,18 +236,20 @@ body.no-scroll {
   z-index: 1;
   top: 4.6875rem;
   right: 0;
+  bottom: 0;
   left: 0;
   height: 0%;
+  overflow-y: scroll;
+  overflow-x: hidden;
   background-color: #F0DB4F;
-  overflow-y: hidden;
 }
 
 .burger-menu a {
   display: block;
   visibility: hidden;
-  width: 100%;
-  margin: 0 auto;
-  padding: 1rem;
+  width: 100vw;
+  margin: 0.75rem auto;
+  padding: 0.75rem 0;
   text-align: center;
   color: #323330;
   text-decoration: none;
@@ -486,8 +488,9 @@ table td:first-child {
 
 footer {
   margin-top: 3.125rem;
+  margin-left: -3.75rem;
   padding: 0.5rem 0;
-  width: 90%;
+  width: calc(100% + 6.875rem);
   background-color: #323330;
   color: #FAFAFF;
   text-align: center;

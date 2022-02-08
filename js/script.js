@@ -5,7 +5,7 @@ const body = document.querySelector('body');
 const header = document.querySelector('.page-header');
 const dropObjs = document.querySelectorAll('.drop');
 const fadeObjs = document.querySelectorAll('.fade');
-const menuBtn = document.querySelectorAll('.nav-link');
+const menuBtn = document.querySelectorAll('.burger-link');
 
 function toggleHeader() {
     if(header.classList.contains('open')){ // CLOSE HAMBURGER MENU
@@ -24,6 +24,7 @@ function toggleHeader() {
 
     }
     else { // OPEN HAMBURGER MENU
+      body.classList.add('no-scroll');
       header.classList.add('open');
 
       dropObjs.forEach(function(element){

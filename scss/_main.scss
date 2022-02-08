@@ -194,8 +194,9 @@ table {
 
 footer {
     margin-top: 3.125rem;
+    margin-left: -3.75rem; // 60px from .main left padding
     padding: 0.5rem 0;
-    width: 90%;
+    width: calc(100% + 6.875rem); // 110px from .main padding
     background-color: $jet;
     color: $white;
     text-align: center;

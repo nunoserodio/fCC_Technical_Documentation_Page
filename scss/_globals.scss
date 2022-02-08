@@ -1,7 +1,6 @@
 html {
     font-size: 100%;
     box-sizing: border-box;
-
     scroll-behavior: smooth;
 }
 
@@ -16,10 +15,10 @@ body {
     font-family: "Roboto", sans-serif;
     background-color: $white;
     color: $jet;
+}
 
-    &.no-scroll {
-        overflow: hidden;
-    }
+.no-scroll {
+    overflow: hidden;
 }
 
 .flex {
@@ -54,7 +53,7 @@ body {
     @include breakpoint-down(medium){
         left: 0;
         max-width: 100%;
-        padding: 0 1.25rem 0 2.5rem; // 20px, 40px
+        padding: 0 1.875rem 0 2.5rem; // 30px right, 40px left
     }
 }
 

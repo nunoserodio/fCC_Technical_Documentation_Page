@@ -61,24 +61,26 @@
     }
 }
 
-// WEBSITE OVERLAY WHILE HAMBURGER MENU IS OPEN
+// OVERLAY HAMBURGER MENU
 
 .burger-menu {
     position: absolute;
     z-index: 1;
     top: 4.6875rem; // 75px;
     right: 0;
+    bottom: 0;
     left: 0;
     height: 0%;
+    overflow-y: scroll;
+    overflow-x: hidden;
     background-color: $minionYellow;
-    overflow-y: hidden;
 
     a {
         display: block;
         visibility: hidden;
-        width: 100%;
-        margin: 0 auto;
-        padding: 1rem;
+        width: 100vw;
+        margin: 0.75rem auto;
+        padding: 0.75rem 0;
         text-align: center;
         color: $jet;
         text-decoration: none;
