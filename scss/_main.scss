@@ -24,8 +24,8 @@ main {
         margin-top: -4.6875rem;
 
         @include breakpoint-up(large){
-            height: 1.25rem; // 20px
-            margin-top: -1.25rem;
+            height: 1rem; // 20px
+            margin-top: -1rem;
         }
     }
 

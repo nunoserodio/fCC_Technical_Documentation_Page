@@ -330,8 +330,8 @@ main {
 
 @media (min-width: 64em) {
   .main-section::before {
-    height: 1.25rem;
-    margin-top: -1.25rem;
+    height: 1rem;
+    margin-top: -1rem;
   }
 }
 
