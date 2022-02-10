@@ -8,7 +8,7 @@
 
   to {
     visibility: visible;
-    height: 100%;
+    height: calc(100% - 4.6875rem);
   }
 }
 
@@ -19,7 +19,7 @@
 @keyframes close-drop-down {
   from {
     visibility: visible;
-    height: 100%;
+    height: calc(100% - 4.6875rem);
   }
 
   to {
